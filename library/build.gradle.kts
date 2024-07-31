@@ -1,14 +1,15 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    id(libs.plugins.android.application.get().pluginId)
+    id(libs.plugins.android.library.get().pluginId) apply false
+    id(libs.plugins.jetbrains.kotlin.android.get().pluginId) apply false
 }
 
 android {
-    namespace = "com.palmteam.lib"
+    namespace = "com.palmteam.verification.lib"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.palmteam.lib"
+        applicationId = "com.palmteam.verification.lib"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -30,9 +31,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+//    kotlinOptions {
+//        jvmTarget = "17"
+//    }
 }
 
 dependencies {
