@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PhoneVerification"
 include(":app")
-include(":lib")
+include(":library")
